@@ -1,6 +1,6 @@
-import BLOG from "@/blog.config";
-import Link from "next/link";
-import formatDate from "@/lib/formatDate";
+import BLOG from '@/blog.config'
+import Link from 'next/link'
+import formatDate from '@/lib/formatDate'
 
 const BlogPost = ({ post }) => {
   return (
@@ -26,7 +26,7 @@ const BlogPost = ({ post }) => {
         </article>
       </a>
     </Link>
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost

@@ -1,18 +1,18 @@
-import BlogPost from "@/components/BlogPost";
-import Container from "@/components/Container";
-import PropTypes from "prop-types";
-import Tags from "@/components/Tags";
-import { useState } from "react";
+import BlogPost from '@/components/BlogPost'
+import Container from '@/components/Container'
+import PropTypes from 'prop-types'
+import Tags from '@/components/Tags'
+import { useState } from 'react'
 
 const SearchLayout = ({ tags, posts, currentTag }) => {
-  const [searchValue, setSearchValue] = useState("");
-  let filteredBlogPosts = [];
+  const [searchValue, setSearchValue] = useState('')
+  let filteredBlogPosts = []
   if (posts) {
     filteredBlogPosts = posts.filter((post) => {
-      const tagContent = post.tags ? post.tags.join(" ") : "";
-      const searchContent = post.title + post.summary + tagContent;
-      return searchContent.toLowerCase().includes(searchValue.toLowerCase());
-    });
+      const tagContent = post.tags ? post.tags.join(' ') : ''
+      const searchContent = post.title + post.summary + tagContent
+      return searchContent.toLowerCase().includes(searchValue.toLowerCase())
+    })
   }
 
   return (
@@ -21,7 +21,7 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
         <input
           type="text"
           placeholder={
-            currentTag ? `Search in #${currentTag}` : "Search Articles"
+            currentTag ? `Search in #${currentTag}` : 'Search Articles'
           }
           className="block w-full border px-4 py-2 border-black bg-white text-black dark:bg-night dark:border-white dark:text-white"
           onChange={(e) => setSearchValue(e.target.value)}
@@ -51,11 +51,11 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
         ))}
       </div>
     </Container>
-  );
-};
+  )
+}
 SearchLayout.propTypes = {
   posts: PropTypes.array.isRequired,
   tags: PropTypes.object.isRequired,
-  currentTag: PropTypes.string,
-};
-export default SearchLayout;
+  currentTag: PropTypes.string
+}
+export default SearchLayout

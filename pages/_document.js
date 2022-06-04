@@ -1,19 +1,18 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-import BLOG from "@/blog.config";
-import CJK from "@/lib/cjk";
+import BLOG from '@/blog.config'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+  static async getInitialProps (ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
-  render() {
+  render () {
     return (
       <Html
         lang={BLOG.lang}
-        className={BLOG.appearance === "dark" ? "dark" : undefined}
+        className={BLOG.appearance === 'dark' ? 'dark' : undefined}
       >
         <Head>
           <link
@@ -51,7 +50,8 @@ class MyDocument extends Document {
             title="RSS 2.0"
             href="/feed"
           ></link>
-          {BLOG.appearance === "auto" ? (
+          {BLOG.appearance === 'auto'
+            ? (
             <>
               <meta
                 name="theme-color"
@@ -64,24 +64,25 @@ class MyDocument extends Document {
                 media="(prefers-color-scheme: dark)"
               />
             </>
-          ) : (
+              )
+            : (
             <meta
               name="theme-color"
               content={
-                BLOG.appearance === "dark"
+                BLOG.appearance === 'dark'
                   ? BLOG.darkBackground
                   : BLOG.lightBackground
               }
             />
-          )}
+              )}
         </Head>
         <body className="bg-day dark:bg-night">
           <Main />
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument
