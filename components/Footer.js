@@ -1,9 +1,9 @@
 import BLOG from '@/blog.config'
-import Vercel from '@/components/Vercel'
+import { useLocale } from '@/lib/locale'
+
 const Footer = ({ fullWidth }) => {
-  const d = new Date()
-  const y = d.getFullYear()
-  const from = +BLOG.since
+  const locale = useLocale()
+
   return (
     <div
       className={`mt-6 flex-shrink-0 m-auto w-full text-gray-500 dark:text-gray-400 transition-all ${
@@ -14,9 +14,22 @@ const Footer = ({ fullWidth }) => {
       <div className="my-4 text-sm leading-6">
         <div className="flex align-baseline justify-between flex-wrap">
           <p>
-            © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
+            <a href={BLOG.oldVersion} target={'_blank'} rel="noreferrer">
+              {locale.FOOTER.OLDSITE}
+            </a>
           </p>
-          <Vercel />
+
+          <p>
+            {locale.FOOTER.BETA} {locale.FOOTER.BUGSREPORT}{' '}
+            <a
+              href={BLOG.github.issueLink}
+              className="text-blue-600"
+              target={'_blank'}
+              rel="noopener noreferrer"
+            >
+              {locale.COMMON.HERE}
+            </a>
+          </p>
         </div>
       </div>
     </div>

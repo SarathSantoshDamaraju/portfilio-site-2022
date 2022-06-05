@@ -9,9 +9,6 @@ const NavBar = () => {
   const locale = useLocale()
   const links = [
     { id: 4, name: locale.NAV.ABOUT, to: '/about', show: true },
-    { id: 1, name: locale.NAV.BITS, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.PROJECTS, to: '/projects', show: BLOG.showAbout },
-    { id: 3, name: locale.NAV.WORK, to: '/work', show: BLOG.showAbout },
     {
       id: 5,
       name: locale.NAV.SEARCH,
