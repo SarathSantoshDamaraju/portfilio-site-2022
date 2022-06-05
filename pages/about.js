@@ -1,15 +1,15 @@
-import BLOG from "@/blog.config";
-import Container from "@/components/Container";
-import { useLocale } from "@/lib/locale";
+import BLOG from '@/blog.config'
+import Container from '@/components/Container'
+import { useLocale } from '@/lib/locale'
 
 const About = () => {
-  const locale = useLocale();
+  const locale = useLocale()
 
   return (
     <Container>
       <div className="relative">
         <p> {locale.ABOUT.INTRO}</p>
-        <h2 className="font-ralewayMedium text-author text-primary my-2 hover:underline cursor-text	">
+        <h2 className="font-ralewayMedium text-author text-primary my-2 hover:underline cursor-text">
           Krishna Damaraju
         </h2>
         <p> {locale.ABOUT.SUMMARY}</p>
@@ -21,7 +21,8 @@ const About = () => {
                 <a
                   href={each.link}
                   className="hover:underline hover:text-primary"
-                  target={"_blank"}
+                  target={'_blank'}
+                  rel="noreferrer"
                 >
                   {each.name}
                 </a>
@@ -31,7 +32,7 @@ const About = () => {
         </div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default About;
+export default About
