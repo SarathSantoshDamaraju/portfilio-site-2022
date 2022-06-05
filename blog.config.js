@@ -36,6 +36,50 @@ const BLOG = {
       measurementId: "", // e.g: G-XXXXXXXXXX
     },
   },
+  github: {
+    repoLink: "https://github.com/SarathSantoshDamaraju/portfilio-site-2022/",
+    issueLink:
+      "https://github.com/SarathSantoshDamaraju/portfilio-site-2022/issues/new?assignees=craigary&labels=bug&template=bug_report.md&title=",
+  },
+  oldVersion: "https://bit.ly/3x7pKQG",
+  socials: [
+    {
+      link: "https://bit.ly/38SXaKO",
+      name: "HashNode",
+    },
+    {
+      link: "http://bit.ly/2wPe5Xx",
+      name: "Medium",
+    },
+    {
+      link: "http://bit.ly/2Cqd4v2",
+      name: "Dev.to",
+    },
+    {
+      link: "http://bit.ly/2MUfVBl",
+      name: "Linkedin",
+    },
+    {
+      link: "http://bit.ly/37Q6tVf",
+      name: "Product Hunt",
+    },
+    {
+      link: "https://twitter.com/krishnadamaraju",
+      name: "Twitter",
+    },
+    {
+      link: "http://bit.ly/2wJgNhc",
+      name: "Github",
+    },
+    {
+      link: "http://bit.ly/2NiENlJ",
+      name: "npm",
+    },
+    {
+      link: "http://bit.ly/2oM9XEd",
+      name: "SO",
+    },
+  ],
   comment: {
     // support provider: gitalk, utterances, cusdis
     provider: "", // leave it empty if you don't need any comment plugin

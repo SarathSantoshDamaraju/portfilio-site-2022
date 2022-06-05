@@ -21,6 +21,9 @@ module.exports = {
           DEFAULT: BLOG.darkBackground || "#2F4858",
         },
       },
+      fontSize: {
+        author: "48px",
+      },
       fontFamily: {
         raleway: ["raleway", ...fontFamily.sans, ...fontSansCJK],
         ralewayMedium: ["raleway-medium", ...fontFamily.sans, ...fontSansCJK],
