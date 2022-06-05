@@ -1,7 +1,7 @@
 const BLOG = {
   title: "Krishna Damaraju",
   author: "Krishna Damaraju",
-  email: "i@craigary.net",
+  email: "sarathdamaraju@yahoo.com",
   link: "",
   description: "Experiences, Mistakes & Learnings",
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
@@ -15,6 +15,8 @@ const BLOG = {
   postsPerPage: 20,
   sortByDate: true,
   showAbout: true,
+  avatar:
+    "https://lh3.googleusercontent.com/ogw/ADea4I7HNclaRfwivBtpXv_GLZlQbO67A0id6w5--1Rjwg=s64-c-mo",
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: "https://og-image-craigary.vercel.app", // The link to generate OG image, don't end with a slash
@@ -39,7 +41,7 @@ const BLOG = {
   github: {
     repoLink: "https://github.com/SarathSantoshDamaraju/portfilio-site-2022/",
     issueLink:
-      "https://github.com/SarathSantoshDamaraju/portfilio-site-2022/issues/new?assignees=craigary&labels=bug&template=bug_report.md&title=",
+      "https://github.com/SarathSantoshDamaraju/portfilio-site-2022/issues/new?assignees=&labels=bug&template=bug_report.md&title=",
   },
   oldVersion: "https://bit.ly/3x7pKQG",
   socials: [

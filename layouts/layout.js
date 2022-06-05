@@ -13,6 +13,7 @@ import Image from 'next/image'
 import TagItem from '@/components/TagItem'
 import formatDate from '@/lib/formatDate'
 import { useLocale } from '@/lib/locale'
+import { useMemo } from 'react/cjs/react.development'
 import { useRouter } from 'next/router'
 
 const mapPageUrl = (id) => {
@@ -28,12 +29,16 @@ const Layout = ({
 }) => {
   const locale = useLocale()
   const router = useRouter()
+
+  const twitterSocial = useMemo(
+    () => BLOG.socials.find((s) => s.name === 'Twitter'),
+    []
+  )
   return (
     <Container
       layout="blog"
       title={frontMatter.title}
       description={frontMatter.summary}
-      // date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
       fullWidth={fullWidth}
     >
@@ -44,12 +49,12 @@ const Layout = ({
         {frontMatter.type[0] !== 'Page' && (
           <nav className="flex mt-7 items-start text-gray-500 dark:text-gray-400">
             <div className="flex mb-4">
-              <a href={BLOG.socialLink || '#'} className="flex">
+              <a href={twitterSocial?.link || '#'} className="flex">
                 <Image
                   alt={BLOG.author}
                   width={24}
                   height={24}
-                  src={`https://gravatar.com/avatar/${emailHash}`}
+                  src={BLOG.avatar}
                   className="rounded-full"
                 />
                 <p className="ml-2 md:block">{BLOG.author}</p>
