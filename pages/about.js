@@ -1,9 +1,9 @@
-import BLOG from "@/blog.config";
-import Container from "@/components/Container";
-import { useLocale } from "@/lib/locale";
+import BLOG from '@/blog.config'
+import Container from '@/components/Container'
+import { useLocale } from '@/lib/locale'
 
 const About = () => {
-  const locale = useLocale();
+  const locale = useLocale()
 
   return (
     <Container>
@@ -21,7 +21,7 @@ const About = () => {
                 <a
                   href={each.link}
                   className="hover:underline hover:text-primary"
-                  target={"_blank"}
+                  target={'_blank'}
                   rel="noopener noreferrer"
                 >
                   {each.name}
@@ -32,7 +32,7 @@ const About = () => {
         </div>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default About;
+export default About
